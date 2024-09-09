@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post in detail</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h2>Here is your post in details</h2>
+    <h4>Post id: <%= post.id %> </h4>
+    <div class="post">
+        <h3 class="user"> @<%=post.username %> </h3>
+        <h4 class="content"> <%=post.content %> </h4>
+        <% if (post.image) { %>
+            <img src="/uploads/<%= post.image %>" alt="Post Image" width=300px />
+          <% } %>
+    </div>
+</body>
+</html> 
